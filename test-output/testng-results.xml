@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="22576" started-at="2018-11-26T10:37:59Z" finished-at="2018-11-26T10:38:22Z">
+  <suite name="Suite" duration-ms="24466" started-at="2018-11-28T13:22:35Z" finished-at="2018-11-28T13:22:59Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="22576" started-at="2018-11-26T10:37:59Z" finished-at="2018-11-26T10:38:22Z">
+    <test name="Test" duration-ms="24466" started-at="2018-11-28T13:22:35Z" finished-at="2018-11-28T13:22:59Z">
       <class name="gov.mst.automation.ica.executionpage.Execution">
-        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.executionpage.Execution@d2cc05a]" name="login" is-config="true" duration-ms="4939" started-at="2018-11-26T16:07:59Z" finished-at="2018-11-26T16:08:04Z">
+        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.executionpage.Execution@d2cc05a]" name="login" is-config="true" duration-ms="4586" started-at="2018-11-28T18:52:35Z" finished-at="2018-11-28T18:52:40Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="executionPage()[pri:0, instance:gov.mst.automation.ica.executionpage.Execution@d2cc05a]" name="executionPage" duration-ms="14595" started-at="2018-11-26T16:08:04Z" finished-at="2018-11-26T16:08:19Z">
+        <test-method status="PASS" signature="executionPage()[pri:0, instance:gov.mst.automation.ica.executionpage.Execution@d2cc05a]" name="executionPage" duration-ms="16808" started-at="2018-11-28T18:52:40Z" finished-at="2018-11-28T18:52:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- executionPage -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.executionpage.Execution@d2cc05a]" name="logout" is-config="true" duration-ms="3001" started-at="2018-11-26T16:08:19Z" finished-at="2018-11-26T16:08:22Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.executionpage.Execution@d2cc05a]" name="logout" is-config="true" duration-ms="3000" started-at="2018-11-28T18:52:56Z" finished-at="2018-11-28T18:52:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
