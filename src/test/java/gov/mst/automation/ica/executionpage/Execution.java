@@ -18,8 +18,8 @@ public class Execution extends Basetest{
 	@Test
 	public void executionPage() throws Exception {
 	String TcID = "TC_001";
-	//Loginpage.performLogin(driver, TcID);
 	Industrialinjuryform.Industrialinjurywebform(driver, TcID);
+	Loginpage.performLogin(driver, TcID);
 	}
 
 }
