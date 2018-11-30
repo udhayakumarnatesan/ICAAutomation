@@ -24,6 +24,7 @@ public class Readexcel {
 	private static int totalRows;
 	private static int totalCols;
 
+	/*This method is used to Read the data from excel*/
 	public static String readData(String tcID, String header) throws Exception {
 		Object result = null;
 		File filepath = new File(Constanturl.filepathxlxs);

@@ -16,6 +16,7 @@ import gov.mst.automation.ica.pages.Loginpage;
 public class Execution extends Basetest{
 	
 	@Test
+	/*This method is used to Run the all pages*/
 	public void executionPage() throws Exception {
 	String TcID = "TC_001";
 	Industrialinjuryform.Industrialinjurywebform(driver, TcID);

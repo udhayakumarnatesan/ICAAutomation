@@ -18,6 +18,7 @@ public class Browserfactory {
 	
 	public static WebDriver driver;
 
+	/*This method is used to select Browser*/ 
 	public static WebDriver getDriver(String browser) {
 		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", Constanturl.driverexepath);

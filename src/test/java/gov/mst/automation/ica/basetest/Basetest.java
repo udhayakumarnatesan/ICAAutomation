@@ -20,6 +20,7 @@ public class Basetest {
 
 	@BeforeTest
 	@Parameters({ "browser" })
+	/*This method is used to open Browser*/
 	public void login(String browser) {
 		driver = Browserfactory.getDriver(browser);
 		driver.manage().window().maximize();

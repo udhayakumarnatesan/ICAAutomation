@@ -33,6 +33,7 @@ public class Loginpage {
 		this.driver = driver;
 	}
 
+	/*This method is used to access the Salesforce Login page*/
 	public static void performLogin(WebDriver driver, String tcname) throws Exception {
 		Loginpage login = PageFactory.initElements(driver, Loginpage.class);
 		driver.get(Constanturl.browserurl);
