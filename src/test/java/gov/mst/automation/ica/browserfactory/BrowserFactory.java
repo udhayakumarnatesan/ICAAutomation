@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import gov.mst.automation.ica.constant.Constanturl;
 
-public class Browserfactory {
+public class BrowserFactory {
 	
 	public static WebDriver driver;
 

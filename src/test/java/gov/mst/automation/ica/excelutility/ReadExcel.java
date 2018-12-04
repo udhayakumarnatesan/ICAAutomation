@@ -18,7 +18,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import gov.mst.automation.ica.constant.Constanturl;
 
-public class Readexcel {
+public class ReadExcel {
 	private static Cell cell = null;
 	private static Row row = null;
 	private static int totalRows;

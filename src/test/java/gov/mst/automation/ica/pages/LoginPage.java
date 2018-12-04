@@ -15,8 +15,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import gov.mst.automation.ica.constant.Constanturl;
+import gov.mst.automation.ica.extentreport.Report;
 
-public class Loginpage {
+public class LoginPage {
 	
 	public WebDriver driver;
 
@@ -29,18 +30,19 @@ public class Loginpage {
 	@FindBy(how = How.NAME, using = "Login")
 	public WebElement Login;
 
-	public Loginpage(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
 	/*This method is used to access the Salesforce Login page*/
 	public static void performLogin(WebDriver driver, String tcname) throws Exception {
-		Loginpage login = PageFactory.initElements(driver, Loginpage.class);
+		LoginPage login = PageFactory.initElements(driver, LoginPage.class);
 		driver.get(Constanturl.browserurl);
-		login.username.sendKeys(gov.mst.automation.ica.excelutility.Readexcel.readData(tcname, "Username"));
-		login.pw.sendKeys(gov.mst.automation.ica.excelutility.Readexcel.readData(tcname, "Password"));
+		login.username.sendKeys(gov.mst.automation.ica.excelutility.ReadExcel.readData(tcname, "Username"));
+		login.pw.sendKeys(gov.mst.automation.ica.excelutility.ReadExcel.readData(tcname, "Password"));
 		login.Login.click();
 		Thread.sleep(3000);
+		Report.testStepStatus("Login to SF Successfully", "Pass", "SF Login");
 	}
 
 }

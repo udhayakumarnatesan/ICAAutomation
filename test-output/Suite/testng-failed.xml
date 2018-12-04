@@ -6,9 +6,12 @@
     <classes>
       <class name="gov.mst.automation.ica.executionpage.Execution">
         <methods>
-          <include name="login"/>
           <include name="logout"/>
+          <include name="startReport"/>
+          <include name="checkTestAfterExecution"/>
           <include name="executionPage"/>
+          <include name="login"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- gov.mst.automation.ica.executionpage.Execution -->
     </classes>
