@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="gov.mst.automation.ica.retrylistener.RetryListener"/>
+  </listeners>
   <test name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="gov.mst.automation.ica.executionpage.Execution">
         <methods>
-          <include name="logout"/>
           <include name="startReport"/>
           <include name="checkTestAfterExecution"/>
           <include name="executionPage"/>
           <include name="login"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- gov.mst.automation.ica.executionpage.Execution -->
     </classes>

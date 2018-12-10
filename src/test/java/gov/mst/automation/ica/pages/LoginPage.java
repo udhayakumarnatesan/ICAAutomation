@@ -14,7 +14,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import gov.mst.automation.ica.constant.Constanturl;
+import gov.mst.automation.ica.constanturl.Constant;
+import gov.mst.automation.ica.excelutility.DataUtils;
 import gov.mst.automation.ica.extentreport.Report;
 
 public class LoginPage {
@@ -35,14 +36,14 @@ public class LoginPage {
 	}
 
 	/*This method is used to access the Salesforce Login page*/
-	public static void performLogin(WebDriver driver, String tcname) throws Exception {
+	public static void performLogin(WebDriver driver, String sheetName, String tcID) throws Exception {
 		LoginPage login = PageFactory.initElements(driver, LoginPage.class);
-		driver.get(Constanturl.browserurl);
-		login.username.sendKeys(gov.mst.automation.ica.excelutility.ReadExcel.readData(tcname, "Username"));
-		login.pw.sendKeys(gov.mst.automation.ica.excelutility.ReadExcel.readData(tcname, "Password"));
+		driver.get(Constant.browserurl);
+		login.username.sendKeys(DataUtils.readExcel(sheetName, tcID, "UserName"));
+		login.pw.sendKeys(DataUtils.readExcel(sheetName, tcID, "Password"));
 		login.Login.click();
 		Thread.sleep(3000);
-		Report.testStepStatus("Login to SF Successfully", "Pass", "SF Login");
+		Report.testStepStatus("Login to Salesforce successfully", "Pass", "SF Login");
 	}
 
 }

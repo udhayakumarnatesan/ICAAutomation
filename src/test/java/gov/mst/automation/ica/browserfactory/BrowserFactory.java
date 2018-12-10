@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import gov.mst.automation.ica.constant.Constanturl;
+import gov.mst.automation.ica.constanturl.Constant;
 
 public class BrowserFactory {
 	
@@ -21,7 +21,7 @@ public class BrowserFactory {
 	/*This method is used to select Browser*/ 
 	public static WebDriver getDriver(String browser) {
 		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", Constanturl.driverexepath);
+			System.setProperty("webdriver.chrome.driver", Constant.driverexepath);
 			driver = new ChromeDriver();
 		} else if (browser.equals("firefox")) {
 			driver = new FirefoxDriver();

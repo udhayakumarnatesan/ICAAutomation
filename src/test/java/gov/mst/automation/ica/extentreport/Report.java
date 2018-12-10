@@ -33,19 +33,18 @@ public class Report {
 	static ExtentTest childTest;
 
 	public static void beginReport() {
-		String projectRootDirectory = System.getProperty("user.dir");
-		extentHtmlReporter = new ExtentHtmlReporter("D:\\extentreport.html");
+		extentHtmlReporter = new ExtentHtmlReporter("D:\\ExtentReport.html");
 		extentReport = new ExtentReports();
 		extentReport.attachReporter(extentHtmlReporter);
 
 		extentReport.setSystemInfo("OS", "Windows");
 		extentReport.setSystemInfo("Environment", "QA");
-		extentReport.setSystemInfo("Username", "Manual tester");
+		extentReport.setSystemInfo("User Name", "Udhayakumar");
 		extentReport.setSystemInfo("Selenium Version", "3.0");
 		extentReport.setSystemInfo("Java Version", "1.8");
 
 		extentHtmlReporter.config().setDocumentTitle("Automation Report");
-		extentHtmlReporter.config().setReportName("Demo");
+		extentHtmlReporter.config().setReportName("ICA Automation Report");
 		extentHtmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 		extentHtmlReporter.config().setTheme(Theme.STANDARD);
 	}
@@ -65,8 +64,6 @@ public class Report {
 			childTest.log(Status.FAIL, description);
 		} else if (status.equalsIgnoreCase("Skip")) {
 			childTest.log(Status.SKIP, description);
-		} else if (status.equalsIgnoreCase("Info")) {
-			childTest.log(Status.INFO, description);
 		} else {
 			throw new Exception("Invalid Status");
 		}
@@ -83,8 +80,11 @@ public class Report {
 			String res = result.getThrowable().getMessage();
 			parentTest.log(Status.FAIL, MarkupHelper.createLabel("Test Case Failed", ExtentColor.RED));
 			logScreenshot(driver, methodName, res);
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			String res = result.getThrowable().getMessage();
+			parentTest.log(Status.FAIL, MarkupHelper.createLabel("Test Case Failed", ExtentColor.YELLOW));
+			logScreenshot(driver, methodName, res);
 		}
-
 	}
 
 	public static void tearDown() {
@@ -94,10 +94,10 @@ public class Report {
 	public static void logScreenshot(WebDriver screenDriver, String testCaseName, String res) throws IOException {
 		File file = ((TakesScreenshot) screenDriver).getScreenshotAs(OutputType.FILE);
 		String workspace = ((new File(".").getAbsolutePath()).replace("\\", "/")).replace(".", "");
-		String fileName = workspace + "/" +testCaseName+ ".jpg";
+		String fileName = workspace + "/" +testCaseName+ ".png";
 		FileUtils.copyFile(file, new File(fileName));
 		childTest.fail(res.toString());
-		childTest.fail("Attached screen shot").addScreenCaptureFromPath(testCaseName + ".jpg");
+		childTest.fail("Attached screen shot").addScreenCaptureFromPath(testCaseName + ".png");
 	}
 
 }
