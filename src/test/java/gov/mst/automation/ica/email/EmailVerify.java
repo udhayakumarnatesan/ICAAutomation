@@ -1,3 +1,10 @@
+/*
+ * @author Udhayakumar N
+ * Created date: Dec 10,2018
+ * Last Edited by: Udhayakumar N
+ * Last Edited date: 
+ * Description: 
+ */
 package gov.mst.automation.ica.email;
 
 import java.util.Properties;
@@ -10,12 +17,11 @@ import javax.mail.Multipart;
 import javax.mail.Session;
 import javax.mail.Store;
 import org.jsoup.Jsoup;
-import org.testng.annotations.Test;
+
 import gov.mst.automation.ica.constanturl.Constant;
 
 public class EmailVerify {
 
-	@Test
 	public static void emailVerify() throws Exception {
 
 		try {
@@ -23,7 +29,8 @@ public class EmailVerify {
 			String from = null, subject = null, content = null, from_email = null, subject_email = null,
 					content_email = null;
 			String[] emailVerify;
-			String text = "Udhayakumar Natesan <udhayakumar@mstsolutions.com>|Test Mail for Automation|This is to test the email method.";
+			String text = "ICA SalesForce <echosign@echosign.com>|Please sign 101_Claims_Employer Report of Injury - Adobe Sign Agreement|ICA SalesForce Has Sent You ";
+			// String text = "Udhayakumar Natesan <udhayakumar@mstsolutions.com>|Automation email verify|Test Automation Udhaya";
 			emailVerify = text.split("\\|");
 			from = emailVerify[0];
 			subject = emailVerify[1];
@@ -49,7 +56,6 @@ public class EmailVerify {
 						subject_email = msg.getSubject();
 					}
 					Object output = msg.getContent();
-					System.out.println(output);
 					if (output instanceof String) {
 						String body = (String) content;
 						content_email = body.toString();
@@ -73,7 +79,7 @@ public class EmailVerify {
 							}
 						} else {
 							throw new Exception(
-									"The given subject value in excel  is not matched with the fetched data ");
+									"The given subject value in excel is not matched with the fetched data ");
 						}
 					} else {
 						throw new Exception("The given From value in excel is not matched with the fetched data ");

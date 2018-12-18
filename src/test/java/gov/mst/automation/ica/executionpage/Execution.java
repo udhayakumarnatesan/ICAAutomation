@@ -24,6 +24,6 @@ public class Execution extends BaseTest {
 		String sheetName = "Testsheet";
 		
 		IndustrialInjuryForm.industrialInjuryWebForm(driver, sheetName, tcID);
-	    LoginPage.performLogin(driver, sheetName, tcID);
+	    //LoginPage.performLogin(driver, sheetName, tcID);
 }
 }
