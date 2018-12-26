@@ -222,7 +222,7 @@ public class IndustrialInjuryForm {
 		Log.info("AD What was the Injury entered Successfully");
 		form.adpartofbodyinjured.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Part of the Body Injured"));
 		Log.info("AD Part of the Body Injured entered Successfully");
-		lookupWindowHandler(form.adpartofbodyinjurytable, "Head - Brain");
+		lookupWindowHandler(form.adpartofbodyinjurytable, DataUtils.readExcel(sheetName, tcID, "AD Part of the Body Injury Table"));
 		Log.info("Adpartofbodyinjurytable entered Successfully");
 		selectDropdown(form.adfatal, DataUtils.readExcel(sheetName, tcID, "ADFatal"));
 		Log.info("ADFatal entered Successfully");
@@ -236,9 +236,9 @@ public class IndustrialInjuryForm {
 		Log.info("COA What happened entered Successfully");
 		form.coawhatobject.sendKeys(DataUtils.readExcel(sheetName, tcID, "COA What object"));
 		Log.info("COA What object entered Successfully");
-		lookupWindowHandler(form.coanatureofinjury, "Specific Injury - Laceration");
+		lookupWindowHandler(form.coanatureofinjury, DataUtils.readExcel(sheetName, tcID, "COA Nature of Injury"));
 		Log.info("Coanatureofinjury entered Successfully");
-		lookupWindowHandler(form.coacauseofinjury, "Motor Vehicle - Vehicle Upset");
+		lookupWindowHandler(form.coacauseofinjury, DataUtils.readExcel(sheetName, tcID, "COA Cause of Injury"));
 		Log.info("Coacauseofinjury entered Successfully");
 		form.coawhatwasemployeedoing.sendKeys(DataUtils.readExcel(sheetName, tcID, "COA What was the Employee Doing Just Before the Incidient"));
 		Log.info("COA What was the Employee Doing Just Before the Incidient entered Successfully");
