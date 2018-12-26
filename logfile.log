@@ -1,0 +1,44 @@
+2018-12-26 13:10:18,899 INFO  [Log] Chrome Browser opened successfully 
+2018-12-26 13:10:27,461 INFO  [Log] Employee Last Name entered Successfully 
+2018-12-26 13:10:27,653 INFO  [Log] Employee First Name entered Successfully 
+2018-12-26 13:10:27,805 INFO  [Log] Employee Social Security Number entered Successfully 
+2018-12-26 13:10:28,109 INFO  [Log] Employee Birth Date entered Successfully 
+2018-12-26 13:10:28,669 INFO  [Log] Employee Home Address entered Successfully 
+2018-12-26 13:10:28,897 INFO  [Log] Employee City entered Successfully 
+2018-12-26 13:10:29,208 INFO  [Log] Employee State entered Successfully 
+2018-12-26 13:10:29,460 INFO  [Log] Employee Zipcode entered Successfully 
+2018-12-26 13:10:29,608 INFO  [Log] Employee Telephone entered Successfully 
+2018-12-26 13:10:29,828 INFO  [Log] Employee Sex entered Successfully 
+2018-12-26 13:10:30,032 INFO  [Log] Marital Status entered Successfully 
+2018-12-26 13:10:30,436 INFO  [Log] Employer Name entered Successfully 
+2018-12-26 13:10:30,656 INFO  [Log] Employer Fein Number entered Successfully 
+2018-12-26 13:10:30,912 INFO  [Log] Employer Office Address entered Successfully 
+2018-12-26 13:10:31,116 INFO  [Log] Employer City entered Successfully 
+2018-12-26 13:10:31,372 INFO  [Log] Employer State entered Successfully 
+2018-12-26 13:10:31,592 INFO  [Log] Employer Zipcode entered Successfully 
+2018-12-26 13:10:31,732 INFO  [Log] Employer Telephone entered Successfully 
+2018-12-26 13:10:32,188 INFO  [Log] AD Date of Injury entered Successfully 
+2018-12-26 13:10:32,592 INFO  [Log] AD Date Employer Notified of Injury entered Successfully 
+2018-12-26 13:10:32,872 INFO  [Log] AD Last Date of Work After Injury entered Successfully 
+2018-12-26 13:10:32,963 INFO  [Log] adhasemployeereturnedtowork clicked Successfully 
+2018-12-26 13:10:33,139 INFO  [Log] AD Employee Occupation entered Successfully 
+2018-12-26 13:10:33,363 INFO  [Log] Did Injury Occur entered Successfully 
+2018-12-26 13:10:33,559 INFO  [Log] AD What was the Injury entered Successfully 
+2018-12-26 13:10:33,779 INFO  [Log] AD Part of the Body Injured entered Successfully 
+2018-12-26 13:10:36,659 INFO  [Log] Adpartofbodyinjurytable entered Successfully 
+2018-12-26 13:10:36,886 INFO  [Log] ADFatal entered Successfully 
+2018-12-26 13:10:37,126 INFO  [Log] AD Was Employee Treated in an Emergency Room entered Successfully 
+2018-12-26 13:10:37,286 INFO  [Log] AD Was Employee Hospitalized Overnight entered Successfully 
+2018-12-26 13:10:37,474 INFO  [Log] AD Is Validity Claim Doubted entered Successfully 
+2018-12-26 13:10:37,674 INFO  [Log] COA What happened entered Successfully 
+2018-12-26 13:10:37,794 INFO  [Log] COA What object entered Successfully 
+2018-12-26 13:10:40,102 INFO  [Log] Coanatureofinjury entered Successfully 
+2018-12-26 13:10:42,556 INFO  [Log] Coacauseofinjury entered Successfully 
+2018-12-26 13:10:42,728 INFO  [Log] COA What was the Employee Doing Just Before the Incidient entered Successfully 
+2018-12-26 13:10:42,876 INFO  [Log] COA Was Worker in Your Employ entered Successfully 
+2018-12-26 13:10:43,160 INFO  [Log] COA Date of Last Hire entered Successfully 
+2018-12-26 13:10:43,316 INFO  [Log] EWD Actual Gross Earnings of Employee entered Successfully 
+2018-12-26 13:10:43,840 INFO  [Log] AS Submitter Email Address entered Successfully 
+2018-12-26 13:10:43,892 INFO  [Log] File uploaded Successfully 
+2018-12-26 13:10:43,980 INFO  [Log] Clicked I agree Successfully 
+2018-12-26 13:10:49,924 INFO  [Log] Form submitted Successfully 

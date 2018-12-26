@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import gov.mst.automation.ica.constanturl.Constant;
+import gov.mst.automation.ica.extentreport.Log;
 
 public class BrowserFactory {
 	
@@ -23,10 +24,13 @@ public class BrowserFactory {
 		if (browser.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", Constant.driverexepath);
 			driver = new ChromeDriver();
+			Log.info("Chrome Browser opened successfully");
 		} else if (browser.equals("firefox")) {
 			driver = new FirefoxDriver();
+			Log.info("Firefox Browser opened Successfully");
 		} else {
 			System.out.println("Browser is not correct");
+			Log.error("Invalid browser");
 		}
 		return driver;
 	}

@@ -10,6 +10,7 @@ package gov.mst.automation.ica.basetest;
 
 import java.io.IOException;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -28,6 +29,7 @@ public class BaseTest {
 	@BeforeSuite
 	public static void startReport() 
 	{
+		DOMConfigurator.configure("log4j.xml");
 		Report.beginReport();
 		System.out.println("Report created");
 	}

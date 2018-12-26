@@ -12,18 +12,20 @@ import org.testng.annotations.Test;
 import gov.mst.automation.ica.basetest.BaseTest;
 import gov.mst.automation.ica.extentreport.Report;
 import gov.mst.automation.ica.pages.IndustrialInjuryForm;
+import gov.mst.automation.ica.pages.LeadRecord;
 import gov.mst.automation.ica.pages.LoginPage;
 
-public class Execution extends BaseTest {
+public class ICASmokeSuite extends BaseTest {
+	
+	public String tcID;
+	public String sheetName;
 
 	@Test
 	/* This method is used to Run the all pages */
 	public void executionPage() throws Exception {
 		Report.beginTest("Emloyer's Report Form", "Verify the able to fill only required fields in Employer's Report Form", "Udhaya", "ICATestCase");
-		String tcID = "TC_001";
-		String sheetName = "Testsheet";
-		
+		tcID = "TC_001";
+		sheetName = "Testsheet";
 		IndustrialInjuryForm.industrialInjuryWebForm(driver, sheetName, tcID);
-	    //LoginPage.performLogin(driver, sheetName, tcID);
 }
 }
