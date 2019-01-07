@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="38006" started-at="2018-12-26T07:40:14Z" finished-at="2018-12-26T07:40:53Z">
+  <suite name="Suite" duration-ms="238471" started-at="2019-01-07T13:16:52Z" finished-at="2019-01-07T13:20:50Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="38006" started-at="2018-12-26T07:40:14Z" finished-at="2018-12-26T07:40:53Z">
-      <class name="gov.mst.automation.ica.executionpage.ICASmokeSuite">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a]" name="startReport" is-config="true" duration-ms="559" started-at="2018-12-26T13:10:14Z" finished-at="2018-12-26T13:10:14Z">
+    <test name="Test" duration-ms="238471" started-at="2019-01-07T13:16:52Z" finished-at="2019-01-07T13:20:50Z">
+      <class name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="startReport" is-config="true" duration-ms="402" started-at="2019-01-07T18:46:52Z" finished-at="2019-01-07T18:46:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a]" name="login" is-config="true" duration-ms="5071" started-at="2018-12-26T13:10:14Z" finished-at="2018-12-26T13:10:20Z">
+        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="login" is-config="true" duration-ms="4516" started-at="2019-01-07T18:46:52Z" finished-at="2019-01-07T18:46:57Z">
           <params>
             <param index="0">
               <value>
@@ -22,30 +22,88 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="executionPage()[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a]" name="executionPage" duration-ms="29876" started-at="2018-12-26T13:10:20Z" finished-at="2018-12-26T13:10:49Z">
+        <test-method status="PASS" signature="industrialInjuryFormValidation()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="industrialInjuryFormValidation" duration-ms="230929" started-at="2019-01-07T18:46:57Z" finished-at="2019-01-07T18:50:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- executionPage -->
-        <test-method status="PASS" signature="checkTestAfterExecution(org.testng.ITestResult)[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a]" name="checkTestAfterExecution" is-config="true" duration-ms="8" started-at="2018-12-26T13:10:49Z" finished-at="2018-12-26T13:10:49Z">
+        </test-method> <!-- industrialInjuryFormValidation -->
+        <test-method status="PASS" signature="checkTestAfterExecution(org.testng.ITestResult)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="checkTestAfterExecution" is-config="true" duration-ms="7" started-at="2019-01-07T18:50:47Z" finished-at="2019-01-07T18:50:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=executionPage status=SUCCESS method=ICASmokeSuite.executionPage()[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a] output={null}]]]>
+                <![CDATA[[TestResult name=industrialInjuryFormValidation status=SUCCESS method=IndustrialInjuryFormSubmission.industrialInjuryFormValidation()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTestAfterExecution -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a]" name="logout" is-config="true" duration-ms="3003" started-at="2018-12-26T13:10:49Z" finished-at="2018-12-26T13:10:53Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="logout" is-config="true" duration-ms="3000" started-at="2019-01-07T18:50:47Z" finished-at="2019-01-07T18:50:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.mst.automation.ica.executionpage.ICASmokeSuite@8bd1b6a]" name="tearDown" is-config="true" duration-ms="332" started-at="2018-12-26T13:10:53Z" finished-at="2018-12-26T13:10:53Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-01-07T18:50:51Z" finished-at="2019-01-07T18:50:51Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[javax.mail.MessagingException: IOException while sending message;
+  nested exception is:
+	java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: javax.mail.MessagingException: IOException while sending message;
+  nested exception is:
+	java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)
+	at gov.mst.automation.ica.emails.EmailReport.send_report(EmailReport.java:65)
+	at gov.mst.automation.ica.basetest.BaseTest.tearDown(BaseTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: javax.mail.MessagingException: IOException while sending message;
+  nested exception is:
+	java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1167)
+	at javax.mail.Transport.send0(Transport.java:195)
+	at javax.mail.Transport.send(Transport.java:124)
+	at gov.mst.automation.ica.emails.EmailReport.send_report(EmailReport.java:63)
+	... 20 more
+Caused by: java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at javax.activation.FileDataSource.getInputStream(Unknown Source)
+	at javax.activation.DataHandler.writeTo(Unknown Source)
+	at javax.mail.internet.MimeBodyPart.writeTo(MimeBodyPart.java:1485)
+	at javax.mail.internet.MimeBodyPart.writeTo(MimeBodyPart.java:865)
+	at javax.mail.internet.MimeMultipart.writeTo(MimeMultipart.java:462)
+	at com.sun.mail.handlers.multipart_mixed.writeTo(multipart_mixed.java:103)
+	at javax.activation.ObjectDataContentHandler.writeTo(Unknown Source)
+	at javax.activation.DataHandler.writeTo(Unknown Source)
+	at javax.mail.internet.MimeBodyPart.writeTo(MimeBodyPart.java:1485)
+	at javax.mail.internet.MimeMessage.writeTo(MimeMessage.java:1773)
+	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1119)
+	... 23 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- gov.mst.automation.ica.executionpage.ICASmokeSuite -->
+      </class> <!-- gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

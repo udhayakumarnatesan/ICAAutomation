@@ -20,6 +20,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import gov.mst.automation.ica.browserfactory.BrowserFactory;
+import gov.mst.automation.ica.emails.EmailReport;
 import gov.mst.automation.ica.extentreport.Report;
 
 public class BaseTest {
@@ -27,35 +28,34 @@ public class BaseTest {
 	public WebDriver driver;
 
 	@BeforeSuite
-	public static void startReport() 
-	{
+	public static void startReport() {
 		DOMConfigurator.configure("log4j.xml");
 		Report.beginReport();
 		System.out.println("Report created");
 	}
+
 	@BeforeTest
 	@Parameters({ "browser" })
-	/*This method is used to open Browser*/
+	/* This method is used to open Browser */
 	public void login(String browser) {
 		driver = BrowserFactory.getDriver(browser);
 		driver.manage().window().maximize();
 	}
 
-	
 	@AfterMethod
-	public void checkTestAfterExecution(ITestResult result) throws IOException
-	{
+	public void checkTestAfterExecution(ITestResult result) throws IOException {
 		Report.checkTestAfterExecution(result, driver);
 	}
-	
+
 	@AfterTest
 	public void logout() throws InterruptedException {
 		Thread.sleep(3000);
 	}
+
 	@AfterSuite
 	public static void tearDown() {
 		Report.tearDown();
-	} 
-	
-	
+		EmailReport.send_report();
+	}
+
 }

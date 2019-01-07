@@ -25,9 +25,6 @@ import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
 import gov.mst.automation.ica.constanturl.Constant;
 
 public class DataUtils {
@@ -44,7 +41,7 @@ public class DataUtils {
 	private static int totalRows = 0;
 	private static int totalCols = 0;
 
-	public static void accessExcel() throws IOException {
+	private static void accessExcel() throws IOException {
 
 		file = new File(Constant.filepathxlxs);
 		inputStream = new FileInputStream(file);
@@ -123,70 +120,6 @@ public class DataUtils {
 			result = new Object();
 		return result.toString();
 	}
-
-	public static String readExcelData(int RowNumber, int ColNumber) throws Exception {
-		accessExcel();
-		Object result = null;
-		try {
-			row = sheet.getRow(RowNumber);
-			if (row != null) {
-				cell = row.getCell(ColNumber);
-				if (cell != null) {
-					switch (cell.getCellType()) {
-					case Cell.CELL_TYPE_NUMERIC:// numeric value in excel
-						if (DateUtil.isCellDateFormatted(cell)) {
-							Date myDate = cell.getDateCellValue();
-							SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
-							result = formatter.format(myDate);
-						} else {
-							result = new BigDecimal(cell.getNumericCellValue()).toPlainString();
-						}
-						break;
-					case Cell.CELL_TYPE_STRING: // string value in excel
-						result = cell.getStringCellValue();
-						break;
-					case Cell.CELL_TYPE_BOOLEAN: // boolean value in excel
-						result = cell.getBooleanCellValue();
-						break;
-					case Cell.CELL_TYPE_BLANK: // blank value in excel
-						result = cell.getStringCellValue();
-						break;
-					case Cell.CELL_TYPE_ERROR: // Error value in excel
-						result = cell.getErrorCellValue() + "";
-						break;
-					}
-				} else {
-					return null;
-				}
-			} else {
-				return null;
-			}
-			inputStream.close();
-		} catch (Exception ex) {
-			throw ex;
-		}
-
-		if (result == null)
-			result = new Object();
-
-		return result.toString();
-	}
-
-	@DataProvider
-	public static Object[][] EmployerReport() throws Exception {
-		accessExcel();
-		Object[][] excelData = null;
-		sheet = workbook.getSheet("Testsheet");
-		int rows = sheet.getLastRowNum();
-		row = sheet.getRow(0);
-		int cells = row.getLastCellNum();
-		excelData = new Object[rows][cells];
-		for (int row = 1; row <= rows; row++) {
-			for (int cell = 0; cell < cells; cell++) {
-				excelData[row - 1][cell] = readExcelData(row, cell);
-			//	System.out.println(excelData[row - 1][cell].toString());
-			}
-		}
-		return excelData;
-	}
 }
+
+	

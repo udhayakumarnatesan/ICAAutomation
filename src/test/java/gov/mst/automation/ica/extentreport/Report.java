@@ -27,13 +27,14 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Report {
+	
 	static ExtentHtmlReporter extentHtmlReporter;
 	static ExtentReports extentReport;
 	static ExtentTest parentTest;
 	static ExtentTest childTest;
 
 	public static void beginReport() {
-		extentHtmlReporter = new ExtentHtmlReporter("D:\\ExtentReport.html");
+		extentHtmlReporter = new ExtentHtmlReporter("D:\\Udhaya\\Eclipse-workspace new\\ICAAutomation\\src\\test\\resources\\Reports");
 		extentReport = new ExtentReports();
 		extentReport.attachReporter(extentHtmlReporter);
 
@@ -94,7 +95,7 @@ public class Report {
 	public static void logScreenshot(WebDriver screenDriver, String testCaseName, String res) throws IOException {
 		File file = ((TakesScreenshot) screenDriver).getScreenshotAs(OutputType.FILE);
 		String workspace = ((new File(".").getAbsolutePath()).replace("\\", "/")).replace(".", "");
-		String fileName = workspace + "/" +testCaseName+ ".png";
+		String fileName = workspace + "/" + testCaseName + ".png";
 		FileUtils.copyFile(file, new File(fileName));
 		childTest.fail(res.toString());
 		childTest.fail("Attached screen shot").addScreenCaptureFromPath(testCaseName + ".png");

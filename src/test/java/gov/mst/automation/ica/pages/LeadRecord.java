@@ -91,12 +91,6 @@ public class LeadRecord {
 	@FindBy(how = How.XPATH, using = ".//span[text()='Last Day of Work after Injury']/following::span[1]/span")
 	public WebElement leadadlastdateofworkafterinjury;
 	
-	/*@FindBy(how = How.ID, using = ".//span[text()='Has Employee returned to work?']/following::span[1]/span")
-	public WebElement leadadhasemployeereturnedtowork;*/
-	
-	/*@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id69:j_id85:empcontri")
-	public WebElement ademployeeoccupation;*/
-	
 	@FindBy(how = How.XPATH, using = ".//span[text()='Did Injury occur on Employer Premises?']/following::span[1]/span")
 	public WebElement leadaddidinjuryoccur;
 
@@ -142,10 +136,7 @@ public class LeadRecord {
 	@FindBy(how = How.XPATH, using = ".//span[text()='Date of Last Hire']/following::span[2]")
 	public WebElement leadcoadateoflasthire;
 
-	/*@FindBy(how = How.XPATH, using = "j_id0:j_id5:j_id9:j_id178:j_id197:datehire")
-	public WebElement ewdactualgrossearnings;*/
-
-	@FindBy(how = How.ID, using = ".//span[text()='Submitter Email Address']/following::span[2]")
+	@FindBy(how = How.XPATH, using = ".//span[text()='Submitter Email Address']/following::span[2]")
 	public WebElement leadassubmitteremail;
 	
 	public static void verifyLead(WebDriver driver, String sheetName, String tcID) throws Exception {
@@ -154,7 +145,7 @@ public class LeadRecord {
 		leadpage.salesforceglobalsearch.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee Last Name"));
 		leadpage.salesforceglobalsearch.sendKeys(Keys.ENTER);
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver) // Fluent wait
-				.withTimeout(30, TimeUnit.SECONDS)
+				.withTimeout(50, TimeUnit.SECONDS)
 				.pollingEvery(5, TimeUnit.SECONDS)
 				.ignoring(NoSuchElementException.class);           
 		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
@@ -207,11 +198,9 @@ public class LeadRecord {
 		String ExpectedData = value;
 		String portaldata = ElementID.getText();
 		if (portaldata.equals(ExpectedData)) {
-			Report.testStepStatus("Value mapped correctly", "Pass", "The value entered in form " + ExpectedData + " and record value is " + portaldata
-					+ " both are same verified ");
+			Report.testStepStatus("Value mapped correctly", "Pass", "The value entered in form " + ExpectedData + " and record value is " + portaldata + " both are same verified");
 		} else {
-			Report.testStepStatus("Value not mapped correctly", "Fail", "The value entered in form " + ExpectedData + " and record value is " + portaldata
-					+ " both are same verified ");
+			Report.testStepStatus("Value not mapped correctly", "Fail", "The value entered in form " + ExpectedData + " and record value is " + portaldata + " both are different not verified ");
 			
 		}
 	}

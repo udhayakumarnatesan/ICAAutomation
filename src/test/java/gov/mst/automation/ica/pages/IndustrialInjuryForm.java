@@ -11,6 +11,7 @@ package gov.mst.automation.ica.pages;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +23,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import gov.mst.automation.ica.constanturl.Constant;
-import gov.mst.automation.ica.email.EmailVerify;
+import gov.mst.automation.ica.emailverify.EmailVerify;
 import gov.mst.automation.ica.excelutility.DataUtils;
 import gov.mst.automation.ica.extentreport.Log;
 import gov.mst.automation.ica.extentreport.Report;
@@ -95,7 +96,7 @@ public class IndustrialInjuryForm {
 	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id69:j_id78:lastday")
 	public WebElement adlastdateofworkafterinjury;
 
-	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id69:j_id81:1")
+	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id69:j_id81:0")
 	public WebElement adhasemployeereturnedtowork;
 
 	@FindBy(how = How.ID, using = "j_id0:j_id5:j_id9:j_id69:j_id85:empcontri")
@@ -165,12 +166,15 @@ public class IndustrialInjuryForm {
 		this.driver = driver;
 	}
 
+	//private static Logger logger = Logger.getLogger(Log.class.getName());//
+	
 	/* This method is used to submit the Employer report form */
 	public static void industrialInjuryWebForm(WebDriver driver, String sheetName, String tcID) throws Exception {
 		IndustrialInjuryForm form = PageFactory.initElements(driver, IndustrialInjuryForm.class);
 		driver.get(Constant.industrialinjuryformurl);
 		ScreenShotCapture.captureScreenshot(driver, "Industrialform");
 		form.employeelastname.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee Last Name"));
+		//logger.info("Employee Last Name entered Successfully");
 		Log.info("Employee Last Name entered Successfully");
 		form.employeefirstname.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee First Name"));
 		Log.info("Employee First Name entered Successfully");
@@ -212,8 +216,8 @@ public class IndustrialInjuryForm {
 		Log.info("AD Date Employer Notified of Injury entered Successfully");
 		form.adlastdateofworkafterinjury.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Last Date of Work After Injury"));
 		Log.info("AD Last Date of Work After Injury entered Successfully");
-		form.adhasemployeereturnedtowork.click();
-		Log.info("adhasemployeereturnedtowork clicked Successfully");
+		//form.adhasemployeereturnedtowork.click();
+		//Log.info("adhasemployeereturnedtowork clicked Successfully");
 		form.ademployeeoccupation.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Employee Occupation"));
 		Log.info("AD Employee Occupation entered Successfully");
 		selectDropdown(form.addidinjuryoccur, DataUtils.readExcel(sheetName, tcID, "Did Injury Occur"));

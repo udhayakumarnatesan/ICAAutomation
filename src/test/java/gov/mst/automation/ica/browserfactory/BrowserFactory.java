@@ -22,10 +22,11 @@ public class BrowserFactory {
 	/*This method is used to select Browser*/ 
 	public static WebDriver getDriver(String browser) {
 		if (browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", Constant.driverexepath);
+			System.setProperty("webdriver.chrome.driver", Constant.chromedriverexepath);
 			driver = new ChromeDriver();
 			Log.info("Chrome Browser opened successfully");
 		} else if (browser.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver", Constant.firefoxdriverexepath);
 			driver = new FirefoxDriver();
 			Log.info("Firefox Browser opened Successfully");
 		} else {

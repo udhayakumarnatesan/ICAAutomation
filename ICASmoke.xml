@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel = "tests">
 	<!-- <listeners> <listener class-name="gov.mst.automation.ica.retrylistener.RetryListener" 
 		/> </listeners> -->
 	<test thread-count="5" name="Test">
@@ -8,7 +8,17 @@
 		</parameter>
 		<classes>
 			<class
-				name="gov.mst.automation.ica.executionpage.ICASmokeSuite"></class>
+				name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission"></class>
 		</classes>
 	</test> <!-- Test -->
+	
+	<!-- <test thread-count="5" name="Test1">
+		<parameter name="browser" value="firefox">
+		</parameter>
+		<classes>
+			<class
+				name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission" />
+		</classes>
+	</test> Test -->
+	
 </suite> <!-- Suite -->
