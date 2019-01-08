@@ -25,12 +25,13 @@ public class EmailVerify {
 	public static void emailVerify() throws Exception {
 
 		try {
-			// Thread.sleep(15000);
+			Thread.sleep(15000);
 			String from = null, subject = null, content = null, from_email = null, subject_email = null,
 					content_email = null;
 			String[] emailVerify;
 			String text = "ICA SalesForce <echosign@echosign.com>|Please sign 101_Claims_Employer Report of Injury - Adobe Sign Agreement|ICA SalesForce Has Sent You ";
-			// String text = "Udhayakumar Natesan <udhayakumar@mstsolutions.com>|Automation email verify|Test Automation Udhaya";
+			// String text = "Udhayakumar Natesan <udhayakumar@mstsolutions.com>|Automation
+			// email verify|Test Automation Udhaya";
 			emailVerify = text.split("\\|");
 			from = emailVerify[0];
 			subject = emailVerify[1];
@@ -74,9 +75,11 @@ public class EmailVerify {
 								System.out.println("Email verified - PASS");
 								i = count;
 							} else
-								throw new Exception("The given content value in excel is not matched with the fetched data ");
+								throw new Exception(
+										"The given content value in excel is not matched with the fetched data ");
 						} else
-							throw new Exception("The given subject value in excel is not matched with the fetched data ");
+							throw new Exception(
+									"The given subject value in excel is not matched with the fetched data ");
 					} else
 						throw new Exception("The given From value in excel is not matched with the fetched data ");
 				}

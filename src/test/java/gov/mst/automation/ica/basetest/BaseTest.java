@@ -30,6 +30,7 @@ public class BaseTest {
 	public WebDriver driver;
 
 	@BeforeSuite
+	// This method is used to begin the Report
 	public static void startReport() {
 		PropertyConfigurator.configure("log4j.properties");
 		Report.beginReport();
@@ -51,13 +52,14 @@ public class BaseTest {
 
 	@AfterTest
 	public void logout() throws InterruptedException {
-		driver.findElement(By.xpath(".//*[@id='oneHeader']/div[2]/span/ul/li[8]/span/button")).click();
+		/*driver.findElement(By.xpath(".//*[@id='oneHeader']/div[2]/span/ul/li[8]/span/button")).click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//a[2][text()='Log Out']")).click();
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
+		driver.close();
 	}
 
-	@AfterSuite
+	@AfterSuite (alwaysRun = true)
 	public static void tearDown() {
 		Report.tearDown();
 		EmailReport.send_report();

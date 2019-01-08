@@ -23,7 +23,7 @@ import javax.mail.internet.MimeMultipart;
 import gov.mst.automation.ica.constanturl.Constant;
 
 public class EmailReport {
-	/** This method used to send the extent report via mail */
+	// This method used to send the extent report via mail
 	public static void send_report() {
 		final String EMAILFROM = Constant.email_from;
 		final String EMAILTO = Constant.email_to;

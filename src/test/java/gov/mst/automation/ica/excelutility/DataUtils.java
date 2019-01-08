@@ -41,7 +41,7 @@ public class DataUtils {
 	private static int totalRows = 0;
 	private static int totalCols = 0;
 
-	private static void accessExcel() throws IOException {
+	public static Workbook accessExcel() throws IOException {
 
 		file = new File(Constant.filepathxlxs);
 		inputStream = new FileInputStream(file);
@@ -52,6 +52,8 @@ public class DataUtils {
 		} else if (fileExtensionName.equals(".xls")) {
 			workbook = new HSSFWorkbook(inputStream);
 		}
+		
+		return workbook;
 	}
 
 // To close the input stream after fetched data
