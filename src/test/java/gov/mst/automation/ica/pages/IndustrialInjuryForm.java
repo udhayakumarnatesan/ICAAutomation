@@ -166,19 +166,17 @@ public class IndustrialInjuryForm {
 		this.driver = driver;
 	}
 
-	//private static Logger logger = Logger.getLogger(Log.class.getName());//
-	
-	/* This method is used to submit the Employer report form */
+	// This method is used to submit the Employer report form
 	public static void industrialInjuryWebForm(WebDriver driver, String sheetName, String tcID) throws Exception {
 		IndustrialInjuryForm form = PageFactory.initElements(driver, IndustrialInjuryForm.class);
 		driver.get(Constant.industrialinjuryformurl);
 		ScreenShotCapture.captureScreenshot(driver, "Industrialform");
 		form.employeelastname.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee Last Name"));
-		//logger.info("Employee Last Name entered Successfully");
 		Log.info("Employee Last Name entered Successfully");
 		form.employeefirstname.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee First Name"));
 		Log.info("Employee First Name entered Successfully");
-		form.employeesocialsecuritynumber.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee Social Security Number"));
+		form.employeesocialsecuritynumber
+				.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee Social Security Number"));
 		Log.info("Employee Social Security Number entered Successfully");
 		form.employeebirthdate.sendKeys(DataUtils.readExcel(sheetName, tcID, "Employee Birth Date"));
 		Log.info("Employee Birth Date entered Successfully");
@@ -212,12 +210,14 @@ public class IndustrialInjuryForm {
 		Log.info("Employer Telephone entered Successfully");
 		form.addateofinjury.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Date of Injury"));
 		Log.info("AD Date of Injury entered Successfully");
-		form.addateemployernotified.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Date Employer Notified of Injury"));
+		form.addateemployernotified
+				.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Date Employer Notified of Injury"));
 		Log.info("AD Date Employer Notified of Injury entered Successfully");
-		form.adlastdateofworkafterinjury.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Last Date of Work After Injury"));
+		form.adlastdateofworkafterinjury
+				.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Last Date of Work After Injury"));
 		Log.info("AD Last Date of Work After Injury entered Successfully");
-		//form.adhasemployeereturnedtowork.click();
-		//Log.info("adhasemployeereturnedtowork clicked Successfully");
+		// form.adhasemployeereturnedtowork.click();
+		// Log.info("adhasemployeereturnedtowork clicked Successfully");
 		form.ademployeeoccupation.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Employee Occupation"));
 		Log.info("AD Employee Occupation entered Successfully");
 		selectDropdown(form.addidinjuryoccur, DataUtils.readExcel(sheetName, tcID, "Did Injury Occur"));
@@ -226,15 +226,19 @@ public class IndustrialInjuryForm {
 		Log.info("AD What was the Injury entered Successfully");
 		form.adpartofbodyinjured.sendKeys(DataUtils.readExcel(sheetName, tcID, "AD Part of the Body Injured"));
 		Log.info("AD Part of the Body Injured entered Successfully");
-		lookupWindowHandler(form.adpartofbodyinjurytable, DataUtils.readExcel(sheetName, tcID, "AD Part of the Body Injury Table"));
+		lookupWindowHandler(form.adpartofbodyinjurytable,
+				DataUtils.readExcel(sheetName, tcID, "AD Part of the Body Injury Table"));
 		Log.info("Adpartofbodyinjurytable entered Successfully");
 		selectDropdown(form.adfatal, DataUtils.readExcel(sheetName, tcID, "ADFatal"));
 		Log.info("ADFatal entered Successfully");
-		selectDropdown(form.adwasemployeetreatedinanemergencyroom, DataUtils.readExcel(sheetName, tcID, "AD Was Employee Treated in an Emergency Room"));
+		selectDropdown(form.adwasemployeetreatedinanemergencyroom,
+				DataUtils.readExcel(sheetName, tcID, "AD Was Employee Treated in an Emergency Room"));
 		Log.info("AD Was Employee Treated in an Emergency Room entered Successfully");
-		selectDropdown(form.adwasemployeehospitalizedovernight, DataUtils.readExcel(sheetName, tcID, "AD Was Employee Hospitalized Overnight"));
+		selectDropdown(form.adwasemployeehospitalizedovernight,
+				DataUtils.readExcel(sheetName, tcID, "AD Was Employee Hospitalized Overnight"));
 		Log.info("AD Was Employee Hospitalized Overnight entered Successfully");
-		selectDropdown(form.adisvalidityclaimdoubted, DataUtils.readExcel(sheetName, tcID, "AD Is Validity Claim Doubted"));
+		selectDropdown(form.adisvalidityclaimdoubted,
+				DataUtils.readExcel(sheetName, tcID, "AD Is Validity Claim Doubted"));
 		Log.info("AD Is Validity Claim Doubted entered Successfully");
 		form.coawhathappened.sendKeys(DataUtils.readExcel(sheetName, tcID, "COA What happened"));
 		Log.info("COA What happened entered Successfully");
@@ -244,13 +248,16 @@ public class IndustrialInjuryForm {
 		Log.info("Coanatureofinjury entered Successfully");
 		lookupWindowHandler(form.coacauseofinjury, DataUtils.readExcel(sheetName, tcID, "COA Cause of Injury"));
 		Log.info("Coacauseofinjury entered Successfully");
-		form.coawhatwasemployeedoing.sendKeys(DataUtils.readExcel(sheetName, tcID, "COA What was the Employee Doing Just Before the Incidient"));
+		form.coawhatwasemployeedoing.sendKeys(
+				DataUtils.readExcel(sheetName, tcID, "COA What was the Employee Doing Just Before the Incidient"));
 		Log.info("COA What was the Employee Doing Just Before the Incidient entered Successfully");
-		selectDropdown(form.coawasworkerinyouremploy, DataUtils.readExcel(sheetName, tcID, "COA Was Worker in Your Employ"));
+		selectDropdown(form.coawasworkerinyouremploy,
+				DataUtils.readExcel(sheetName, tcID, "COA Was Worker in Your Employ"));
 		Log.info("COA Was Worker in Your Employ entered Successfully");
 		form.coadateoflasthire.sendKeys(DataUtils.readExcel(sheetName, tcID, "COA Date of Last Hire"));
 		Log.info("COA Date of Last Hire entered Successfully");
-		form.ewdactualgrossearnings.sendKeys(DataUtils.readExcel(sheetName, tcID, "EWD Actual Gross Earnings of Employee"));
+		form.ewdactualgrossearnings
+				.sendKeys(DataUtils.readExcel(sheetName, tcID, "EWD Actual Gross Earnings of Employee"));
 		Log.info("EWD Actual Gross Earnings of Employee entered Successfully");
 		form.assubmitteremail.sendKeys(DataUtils.readExcel(sheetName, tcID, "AS Submitter Email Address"));
 		Log.info("AS Submitter Email Address entered Successfully");
@@ -263,16 +270,16 @@ public class IndustrialInjuryForm {
 		Log.info("Form submitted Successfully");
 		System.out.println("Induatrial Injury Form submitted successfully");
 		Report.testStepStatus("Employer's form submitted successfully", "Pass", "Employer's form");
-		//EmailVerify.emailVerify();
+		// EmailVerify.emailVerify();
 	}
 
-	/* This method is used for Picklist dropdown */
+	// This method is used for Picklist dropdown
 	public static void selectDropdown(WebElement Dropdownname, String Value) {
 		Select Picklist = new Select(Dropdownname);
 		Picklist.selectByValue(Value);
 	}
 
-	/* This method is used for Window Handler */
+	// This method is used for Window Handler
 	public static void lookupWindowHandler(WebElement lookupIcon, String value) throws InterruptedException {
 		lookupIcon.click();
 		String parentWindow = driver.getWindowHandle();
@@ -281,10 +288,10 @@ public class IndustrialInjuryForm {
 			if (!parentWindow.equals(window)) {
 				driver.switchTo().window(window);
 				driver.switchTo().frame("searchFrame");
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//Implicit wait
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);// Implicit wait
 				driver.findElement(By.xpath(".//*[@id='lksrch']")).sendKeys(value);
 				WebDriverWait wait = new WebDriverWait(driver, 10);
-				WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.name("go")));//Explicit wait
+				WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.name("go")));// Explicit wait
 				driver.findElement(By.name("go")).click();
 				driver.switchTo().defaultContent();
 				driver.switchTo().frame("resultsFrame");

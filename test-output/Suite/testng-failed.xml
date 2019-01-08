@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test name="Test(failed)" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission">
+      <class name="gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification">
         <methods>
-          <include name="checkTestAfterExecution"/>
+          <include name="executionPage"/>
           <include name="startReport"/>
           <include name="checkTestAfterExecution"/>
-          <include name="industrialInjuryFormValidation"/>
-          <include name="login"/>
           <include name="login"/>
         </methods>
-      </class> <!-- gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission -->
+      </class> <!-- gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification -->
     </classes>
   </test> <!-- Test(failed) -->
-  <test name="Test1(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission">
-        <methods>
-          <include name="checkTestAfterExecution"/>
-          <include name="startReport"/>
-          <include name="checkTestAfterExecution"/>
-          <include name="industrialInjuryFormValidation"/>
-          <include name="login"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission -->
-    </classes>
-  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

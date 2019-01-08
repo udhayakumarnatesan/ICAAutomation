@@ -9,8 +9,10 @@
 package gov.mst.automation.ica.basetest;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.xml.DOMConfigurator;
+import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -29,14 +31,14 @@ public class BaseTest {
 
 	@BeforeSuite
 	public static void startReport() {
-		DOMConfigurator.configure("log4j.xml");
+		PropertyConfigurator.configure("log4j.properties");
 		Report.beginReport();
 		System.out.println("Report created");
 	}
 
 	@BeforeTest
 	@Parameters({ "browser" })
-	/* This method is used to open Browser */
+	// This method is used to open Browser
 	public void login(String browser) {
 		driver = BrowserFactory.getDriver(browser);
 		driver.manage().window().maximize();
@@ -49,6 +51,9 @@ public class BaseTest {
 
 	@AfterTest
 	public void logout() throws InterruptedException {
+		driver.findElement(By.xpath(".//*[@id='oneHeader']/div[2]/span/ul/li[8]/span/button")).click();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.findElement(By.xpath(".//a[2][text()='Log Out']")).click();
 		Thread.sleep(3000);
 	}
 

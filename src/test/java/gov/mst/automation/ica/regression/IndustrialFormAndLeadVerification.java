@@ -8,7 +8,7 @@ import gov.mst.automation.ica.pages.IndustrialInjuryForm;
 import gov.mst.automation.ica.pages.LeadRecord;
 import gov.mst.automation.ica.pages.LoginPage;
 
-public class IndustrialInjuryFormAndLeadRecordVerification extends BaseTest {
+public class IndustrialFormAndLeadVerification extends BaseTest {
 	public String tcID;
 	public String sheetName;
 

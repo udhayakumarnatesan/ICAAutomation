@@ -8,7 +8,7 @@
 		</parameter>
 		<classes>
 			<class
-				name="gov.mst.automation.ica.regression.IndustrialInjuryFormAndLeadRecordVerification" />
+				name="gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

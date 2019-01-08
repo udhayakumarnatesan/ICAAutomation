@@ -63,12 +63,14 @@ public class IndustrialInjuryFormLink {
 	@FindBy(how = How.XPATH, using = ".//span[text()='Head - Vertebrae']")
 	public WebElement Headvertebrae;
 
+	// This method is used to verify the Lookup field data
 	public static void industrialInjuryWebForm(WebDriver driver, String sheetName, String tcID) throws Exception {
 		IndustrialInjuryFormLink formlink = PageFactory.initElements(driver, IndustrialInjuryFormLink.class);
 		driver.get(Constant.industrialinjuryformurl);
 		formlink.links.click();
 		Thread.sleep(10000);
-		verifyLookupvalue(driver, formlink.Headmultipleheadinjury, DataUtils.readExcel(sheetName, tcID, "Headmultipleheadinjury"));
+		verifyLookupvalue(driver, formlink.Headmultipleheadinjury,
+				DataUtils.readExcel(sheetName, tcID, "Headmultipleheadinjury"));
 		formlink.links.click();
 		verifyLookupvalue(driver, formlink.Headskull, DataUtils.readExcel(sheetName, tcID, "HeadHeadskull"));
 		formlink.links.click();
@@ -88,11 +90,13 @@ public class IndustrialInjuryFormLink {
 		formlink.links.click();
 		verifyLookupvalue(driver, formlink.Headfacialbones, DataUtils.readExcel(sheetName, tcID, "Headfacialbones"));
 		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headmultipleneckinjury, DataUtils.readExcel(sheetName, tcID, "Headmultipleneckinjury"));
+		verifyLookupvalue(driver, formlink.Headmultipleneckinjury,
+				DataUtils.readExcel(sheetName, tcID, "Headmultipleneckinjury"));
 		formlink.links.click();
 		verifyLookupvalue(driver, formlink.Headvertebrae, DataUtils.readExcel(sheetName, tcID, "Headvertebrae"));
 	}
 
+	// This method is used to check the value while clicking link
 	public static void verifyLookupvalue(WebDriver driver, WebElement ElementID, String excelvalue) throws Exception {
 		String parentWindow = driver.getWindowHandle();
 		Set<String> totalNumberOfOpenedWindows = driver.getWindowHandles();
@@ -104,7 +108,7 @@ public class IndustrialInjuryFormLink {
 				if (portaldata.equals(ExpectedData)) {
 					Report.testStepStatus("Value same", "Pass", "The given value is " + ExpectedData
 							+ " and lookup value is " + portaldata + " both are same verified");
-					
+
 				} else {
 					Report.testStepStatus("Value not same", "Fail", "The given value is " + ExpectedData
 							+ " and lookup value is " + portaldata + " both are different not verified ");
@@ -115,7 +119,5 @@ public class IndustrialInjuryFormLink {
 			}
 		}
 	}
-	
-	
 
 }

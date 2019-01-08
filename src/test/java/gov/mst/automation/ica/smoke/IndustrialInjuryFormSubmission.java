@@ -32,7 +32,7 @@ public class IndustrialInjuryFormSubmission extends BaseTest {
 	@Test(priority=2)
 	 This method is used to Run the all pages 
 	public void industrialInjuryFormLinkVerification() throws Exception {
-		Report.beginTest("Wish Child Referral Form", "Verify the Sections and its appropriate fields are available in Form", "Udhaya", "MAWATestCase");
+		Report.beginTest("Industrial Injury Form", "Verify the link in Form", "Udhaya", "ICATestCase");
 		tcID = "TC_001";
 		sheetName = "Testsheet";
 		IndustrialInjuryFormLink.industrialInjuryWebForm(driver, sheetName, tcID);
@@ -41,7 +41,7 @@ public class IndustrialInjuryFormSubmission extends BaseTest {
 	@Test
 	/* This method is used to Run the all pages */
 	public void industrialInjuryFormValidation() throws Exception {
-		Report.beginTest("Wish Child Referral Form", "Verify the Sections and its appropriate fields are available in Form", "Udhaya", "MAWATestCase");
+		Report.beginTest("Industrial Injury Form", "Verify the required fields in Form", "Udhaya", "ICATestCase");
 		tcID = "TC_001";
 		sheetName = "Testsheet";
 		IndustrialInjuryFormValidation.industrialInjuryWebForm(driver, sheetName, tcID);

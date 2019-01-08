@@ -34,7 +34,7 @@ public class Report {
 	static ExtentTest childTest;
 
 	public static void beginReport() {
-		extentHtmlReporter = new ExtentHtmlReporter("D:\\Udhaya\\Eclipse-workspace new\\ICAAutomation\\src\\test\\resources\\Reports");
+		extentHtmlReporter = new ExtentHtmlReporter("D:\\ExtentReport.html");
 		extentReport = new ExtentReports();
 		extentReport.attachReporter(extentHtmlReporter);
 

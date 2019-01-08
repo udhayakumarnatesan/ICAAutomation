@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="238471" started-at="2019-01-07T13:16:52Z" finished-at="2019-01-07T13:20:50Z">
+  <suite name="Suite" duration-ms="20663" started-at="2019-01-08T06:07:51Z" finished-at="2019-01-08T06:08:12Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="238471" started-at="2019-01-07T13:16:52Z" finished-at="2019-01-07T13:20:50Z">
-      <class name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="startReport" is-config="true" duration-ms="402" started-at="2019-01-07T18:46:52Z" finished-at="2019-01-07T18:46:52Z">
+    <test name="Test" duration-ms="20663" started-at="2019-01-08T06:07:51Z" finished-at="2019-01-08T06:08:12Z">
+      <class name="gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624]" name="startReport" is-config="true" duration-ms="281" started-at="2019-01-08T11:37:51Z" finished-at="2019-01-08T11:37:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="login" is-config="true" duration-ms="4516" started-at="2019-01-07T18:46:52Z" finished-at="2019-01-07T18:46:57Z">
+        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624]" name="login" is-config="true" duration-ms="4522" started-at="2019-01-08T11:37:51Z" finished-at="2019-01-08T11:37:55Z">
           <params>
             <param index="0">
               <value>
@@ -22,47 +22,28 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="industrialInjuryFormValidation()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="industrialInjuryFormValidation" duration-ms="230929" started-at="2019-01-07T18:46:57Z" finished-at="2019-01-07T18:50:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- industrialInjuryFormValidation -->
-        <test-method status="PASS" signature="checkTestAfterExecution(org.testng.ITestResult)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="checkTestAfterExecution" is-config="true" duration-ms="7" started-at="2019-01-07T18:50:47Z" finished-at="2019-01-07T18:50:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=industrialInjuryFormValidation status=SUCCESS method=IndustrialInjuryFormSubmission.industrialInjuryFormValidation()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkTestAfterExecution -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="logout" is-config="true" duration-ms="3000" started-at="2019-01-07T18:50:47Z" finished-at="2019-01-07T18:50:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@3daa422a]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-01-07T18:50:51Z" finished-at="2019-01-07T18:50:51Z">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[javax.mail.MessagingException: IOException while sending message;
-  nested exception is:
-	java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)]]>
-            </message>
+        <test-method status="FAIL" signature="executionPage()[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624]" name="executionPage" duration-ms="16046" started-at="2019-01-08T11:37:55Z" finished-at="2019-01-08T11:38:12Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: javax.mail.MessagingException: IOException while sending message;
-  nested exception is:
-	java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)
-	at gov.mst.automation.ica.emails.EmailReport.send_report(EmailReport.java:65)
-	at gov.mst.automation.ica.basetest.BaseTest.tearDown(BaseTest.java:58)
+              <![CDATA[java.lang.NullPointerException
+	at gov.mst.automation.ica.pages.IndustrialInjuryForm.lookupWindowHandler(IndustrialInjuryForm.java:292)
+	at gov.mst.automation.ica.pages.IndustrialInjuryForm.industrialInjuryWebForm(IndustrialInjuryForm.java:229)
+	at gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification.executionPage(IndustrialFormAndLeadVerification.java:21)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:144)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:357)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
 	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
@@ -73,37 +54,103 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: javax.mail.MessagingException: IOException while sending message;
-  nested exception is:
-	java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)
-	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1167)
-	at javax.mail.Transport.send0(Transport.java:195)
-	at javax.mail.Transport.send(Transport.java:124)
-	at gov.mst.automation.ica.emails.EmailReport.send_report(EmailReport.java:63)
-	... 20 more
-Caused by: java.io.FileNotFoundException: src\test\resources\report\report.html (The system cannot find the path specified)
-	at java.io.FileInputStream.open0(Native Method)
-	at java.io.FileInputStream.open(Unknown Source)
-	at java.io.FileInputStream.<init>(Unknown Source)
-	at javax.activation.FileDataSource.getInputStream(Unknown Source)
-	at javax.activation.DataHandler.writeTo(Unknown Source)
-	at javax.mail.internet.MimeBodyPart.writeTo(MimeBodyPart.java:1485)
-	at javax.mail.internet.MimeBodyPart.writeTo(MimeBodyPart.java:865)
-	at javax.mail.internet.MimeMultipart.writeTo(MimeMultipart.java:462)
-	at com.sun.mail.handlers.multipart_mixed.writeTo(multipart_mixed.java:103)
-	at javax.activation.ObjectDataContentHandler.writeTo(Unknown Source)
-	at javax.activation.DataHandler.writeTo(Unknown Source)
-	at javax.mail.internet.MimeBodyPart.writeTo(MimeBodyPart.java:1485)
-	at javax.mail.internet.MimeMessage.writeTo(MimeMessage.java:1773)
-	at com.sun.mail.smtp.SMTPTransport.sendMessage(SMTPTransport.java:1119)
-	... 23 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executionPage -->
+        <test-method status="FAIL" signature="checkTestAfterExecution(org.testng.ITestResult)[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624]" name="checkTestAfterExecution" is-config="true" duration-ms="0" started-at="2019-01-08T11:38:12Z" finished-at="2019-01-08T11:38:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=executionPage status=FAILURE method=IndustrialFormAndLeadVerification.executionPage()[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'MSTSYS0093', ip: '10.10.100.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\MSTSYS~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59756}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: f3a1089291f1954484453b36872a2786]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=71.0.3578.98)
+  (Driver info: chromedriver=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'MSTSYS0093', ip: '10.10.100.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\MSTSYS~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59756}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
+Session ID: f3a1089291f1954484453b36872a2786
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:657)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:342)
+	at gov.mst.automation.ica.extentreport.Report.logScreenshot(Report.java:96)
+	at gov.mst.automation.ica.extentreport.Report.checkTestAfterExecution(Report.java:83)
+	at gov.mst.automation.ica.basetest.BaseTest.checkTestAfterExecution(BaseTest.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTestAfterExecution -->
+        <test-method status="SKIP" signature="logout()[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624]" name="logout" is-config="true" duration-ms="0" started-at="2019-01-08T11:38:12Z" finished-at="2019-01-08T11:38:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification@5e3a8624]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-01-08T11:38:12Z" finished-at="2019-01-08T11:38:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission -->
+      </class> <!-- gov.mst.automation.ica.regression.IndustrialFormAndLeadVerification -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

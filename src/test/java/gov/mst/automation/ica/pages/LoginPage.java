@@ -35,7 +35,7 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	/*This method is used to access the Salesforce Login page*/
+	//This method is used to access the Salesforce Login page
 	public static void performLogin(WebDriver driver, String sheetName, String tcID) throws Exception {
 		LoginPage login = PageFactory.initElements(driver, LoginPage.class);
 		driver.get(Constant.browserurl);

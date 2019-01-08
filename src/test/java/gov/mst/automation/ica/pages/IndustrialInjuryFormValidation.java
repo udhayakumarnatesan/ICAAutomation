@@ -17,14 +17,18 @@ public class IndustrialInjuryFormValidation {
 	@FindBy(how = How.CLASS_NAME, using = "btn")
 	public WebElement submit;
 
-	@FindBy(how = How.XPATH, using = ".//*[@id='j_id0:j_id5:j_id9:j_id11']/div[2]/table/tbody/tr[1]/th/label//following::td[1]/div[1]/div[2]")
+	@FindBy(how = How.XPATH, using = ".//h3[text()='EMPLOYEE']//following::label[contains(text(),'LAST NAME')]//following::td[1]/div[1]/div[2]")
 	public WebElement employeelastname;
+	
+	@FindBy(how = How.XPATH, using = ".//h3[text()='EMPLOYEE']//following::label[contains(text(),'FIRST')]//following::td[1]/div[1]/div[2]")
+	public WebElement employeefirstname;
 
 	public static void industrialInjuryWebForm(WebDriver driver, String sheetName, String tcID) throws Exception {
-		IndustrialInjuryForm form = PageFactory.initElements(driver, IndustrialInjuryForm.class);
+		IndustrialInjuryFormValidation formvalidation = PageFactory.initElements(driver, IndustrialInjuryFormValidation.class);
 		driver.get(Constant.industrialinjuryformurl);
-		form.submit.click();
-		validation(form.employeelastname, DataUtils.readExcel(sheetName, tcID, "Employee Last Name Validation"));
+		formvalidation.submit.click();
+		validation(formvalidation.employeelastname, DataUtils.readExcel(sheetName, tcID, "Employee Last Name Validation"));
+		validation(formvalidation.employeefirstname, DataUtils.readExcel(sheetName, tcID, "Employee First Name Validation"));
 }
 	
 	public static void validation(WebElement ElementID, String value) throws Exception {
