@@ -28,11 +28,11 @@ public class Constant {
 	public static String filepathxlxs = "D:\\Udhaya\\Eclipse-workspace new\\ICAAutomation\\src\\test\\resources\\ICAAutomation.xlsx";
 
 	// Report path
-	public static String Reportpath = "src/test/resources/report/report.html";
+	public static String Reportpath = "D:\\Udhaya\\Eclipse-workspace new\\ICAAutomation\\src\\test\\resources\\Reports\\ExtentReport.html";
 
 	// Email properties
 	public static String email_from = "udhayakumar@mstsolutions.com";
 	public static String email_to = "udhayakumar@mstsolutions.com";
-	public static String email_pwd = "mcslmdjtgmrrfgpv";
+	public static String email_pwd = "kkmghlsmzysnbjhg";
 	public static String email_smtp = "smtp.office365.com";
 }

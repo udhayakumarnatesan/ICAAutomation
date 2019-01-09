@@ -41,7 +41,6 @@ public class IndustrialInjuryFormSubmission extends BaseTest {
 		IndustrialInjuryFormLink.industrialInjuryWebForm(driver, sheetName, tcID);
 }*/
 	
-	 
 	@Test(priority = 1, dataProvider = "industrialInjuryFormValidationData")
 	// This method is used to Run the all pages
 	public void industrialInjuryFormValidation(String tcId, String EmployeeLastNameValidation, String EmployeFirstNameValidation, String EmployeeSocialSecurityNumber) throws Exception {
