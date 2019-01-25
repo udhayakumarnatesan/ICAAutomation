@@ -52,7 +52,7 @@ public class DataUtils {
 		} else if (fileExtensionName.equals(".xls")) {
 			workbook = new HSSFWorkbook(inputStream);
 		}
-		
+
 		return workbook;
 	}
 
@@ -123,5 +123,3 @@ public class DataUtils {
 		return result.toString();
 	}
 }
-
-	

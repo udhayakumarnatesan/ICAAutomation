@@ -6,9 +6,9 @@
     <classes>
       <class name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission">
         <methods>
-          <include name="logout"/>
+          <include name="industrialInjuryFormLinkVerification"/>
           <include name="startReport"/>
-          <include name="industrialInjuryFormValidation"/>
+          <include name="checkTestAfterExecution"/>
           <include name="login"/>
           <include name="tearDown"/>
         </methods>

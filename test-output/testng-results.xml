@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="16222" started-at="2019-01-09T12:05:45Z" finished-at="2019-01-09T12:06:01Z">
+  <suite name="Suite" duration-ms="17268" started-at="2019-01-25T09:13:18Z" finished-at="2019-01-25T09:13:35Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="16222" started-at="2019-01-09T12:05:45Z" finished-at="2019-01-09T12:06:01Z">
+    <test name="Test" duration-ms="17268" started-at="2019-01-25T09:13:18Z" finished-at="2019-01-25T09:13:35Z">
       <class name="gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="startReport" is-config="true" duration-ms="349" started-at="2019-01-09T17:35:45Z" finished-at="2019-01-09T17:35:45Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="startReport" is-config="true" duration-ms="272" started-at="2019-01-25T14:43:18Z" finished-at="2019-01-25T14:43:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="login" is-config="true" duration-ms="4495" started-at="2019-01-09T17:35:45Z" finished-at="2019-01-09T17:35:50Z">
+        <test-method status="PASS" signature="login(java.lang.String)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="login" is-config="true" duration-ms="4356" started-at="2019-01-25T14:43:18Z" finished-at="2019-01-25T14:43:23Z">
           <params>
             <param index="0">
               <value>
@@ -22,48 +22,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="industrialInjuryFormValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="industrialInjuryFormValidation" duration-ms="10603" started-at="2019-01-09T17:35:50Z" data-provider="industrialInjuryFormValidationData" finished-at="2019-01-09T17:36:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_001]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Error: You must enter a value]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Error: You must enter a value]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Error: You must enter a value]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="industrialInjuryFormLinkVerification()[pri:1, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="industrialInjuryFormLinkVerification" duration-ms="10723" started-at="2019-01-25T14:43:23Z" finished-at="2019-01-25T14:43:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- industrialInjuryFormValidation -->
-        <test-method status="PASS" signature="checkTestAfterExecution(org.testng.ITestResult)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="checkTestAfterExecution" is-config="true" duration-ms="4" started-at="2019-01-09T17:36:01Z" finished-at="2019-01-09T17:36:01Z">
+        </test-method> <!-- industrialInjuryFormLinkVerification -->
+        <test-method status="PASS" signature="checkTestAfterExecution(org.testng.ITestResult)[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="checkTestAfterExecution" is-config="true" duration-ms="8" started-at="2019-01-25T14:43:33Z" finished-at="2019-01-25T14:43:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=industrialInjuryFormValidation status=SUCCESS method=IndustrialInjuryFormSubmission.industrialInjuryFormValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7] output={null}]]]>
+                <![CDATA[[TestResult name=industrialInjuryFormLinkVerification status=SUCCESS method=IndustrialInjuryFormSubmission.industrialInjuryFormLinkVerification()[pri:1, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTestAfterExecution -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="logout" is-config="true" duration-ms="327" started-at="2019-01-09T17:36:01Z" finished-at="2019-01-09T17:36:01Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="logout" is-config="true" duration-ms="2145" started-at="2019-01-25T14:43:33Z" finished-at="2019-01-25T14:43:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="tearDown" is-config="true" duration-ms="9865" started-at="2019-01-09T17:36:01Z" finished-at="2019-01-09T17:36:11Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.mst.automation.ica.smoke.IndustrialInjuryFormSubmission@91161c7]" name="tearDown" is-config="true" duration-ms="8583" started-at="2019-01-25T14:43:36Z" finished-at="2019-01-25T14:43:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

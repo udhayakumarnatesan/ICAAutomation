@@ -68,56 +68,41 @@ public class IndustrialInjuryFormLink {
 		IndustrialInjuryFormLink formlink = PageFactory.initElements(driver, IndustrialInjuryFormLink.class);
 		driver.get(Constant.industrialinjuryformurl);
 		formlink.links.click();
-		Thread.sleep(10000);
-		verifyLookupvalue(driver, formlink.Headmultipleheadinjury,
-				DataUtils.readExcel(sheetName, tcID, "Headmultipleheadinjury"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headskull, DataUtils.readExcel(sheetName, tcID, "HeadHeadskull"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headbrain, DataUtils.readExcel(sheetName, tcID, "HeadHeadbrain"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headear, DataUtils.readExcel(sheetName, tcID, "HeadHeadear"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headeyes, DataUtils.readExcel(sheetName, tcID, "HeadHeadeyes"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headnose, DataUtils.readExcel(sheetName, tcID, "HeadHeadnose"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headteeth, DataUtils.readExcel(sheetName, tcID, "HeadHeadteeth"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headmouth, DataUtils.readExcel(sheetName, tcID, "HeadHeadmouth"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headsofttissue, DataUtils.readExcel(sheetName, tcID, "Headsofttissue"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headfacialbones, DataUtils.readExcel(sheetName, tcID, "Headfacialbones"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headmultipleneckinjury,
-				DataUtils.readExcel(sheetName, tcID, "Headmultipleneckinjury"));
-		formlink.links.click();
-		verifyLookupvalue(driver, formlink.Headvertebrae, DataUtils.readExcel(sheetName, tcID, "Headvertebrae"));
-	}
-
-	// This method is used to check the value while clicking link
-	public static void verifyLookupvalue(WebDriver driver, WebElement ElementID, String excelvalue) throws Exception {
+		Thread.sleep(2000);
 		String parentWindow = driver.getWindowHandle();
 		Set<String> totalNumberOfOpenedWindows = driver.getWindowHandles();
 		for (String window : totalNumberOfOpenedWindows) {
 			if (!parentWindow.equals(window)) {
 				driver.switchTo().window(window);
-				String ExpectedData = excelvalue;
-				String portaldata = ElementID.getText();
-				if (portaldata.equals(ExpectedData)) {
-					Report.testStepStatus("Value same", "Pass", "The given value is " + ExpectedData
-							+ " and lookup value is " + portaldata + " both are same verified");
-
-				} else {
-					Report.testStepStatus("Value not same", "Fail", "The given value is " + ExpectedData
-							+ " and lookup value is " + portaldata + " both are different not verified ");
-				}
-
+				verifyLookupvalue(driver, formlink.Headmultipleheadinjury, DataUtils.readExcel(sheetName, tcID, "Headmultipleheadinjury"));
+				verifyLookupvalue(driver, formlink.Headskull, DataUtils.readExcel(sheetName, tcID, "HeadHeadskull"));
+				verifyLookupvalue(driver, formlink.Headbrain, DataUtils.readExcel(sheetName, tcID, "HeadHeadbrain"));
+				verifyLookupvalue(driver, formlink.Headear, DataUtils.readExcel(sheetName, tcID, "HeadHeadear"));
+				verifyLookupvalue(driver, formlink.Headeyes, DataUtils.readExcel(sheetName, tcID, "HeadHeadeyes"));
+				verifyLookupvalue(driver, formlink.Headnose, DataUtils.readExcel(sheetName, tcID, "HeadHeadnose"));
+				verifyLookupvalue(driver, formlink.Headteeth, DataUtils.readExcel(sheetName, tcID, "HeadHeadteeth"));
+				verifyLookupvalue(driver, formlink.Headmouth, DataUtils.readExcel(sheetName, tcID, "HeadHeadmouth"));
+				verifyLookupvalue(driver, formlink.Headsofttissue, DataUtils.readExcel(sheetName, tcID, "Headsofttissue"));
+				verifyLookupvalue(driver, formlink.Headfacialbones, DataUtils.readExcel(sheetName, tcID, "Headfacialbones"));
+				verifyLookupvalue(driver, formlink.Headmultipleneckinjury, DataUtils.readExcel(sheetName, tcID, "Headmultipleneckinjury"));
+				verifyLookupvalue(driver, formlink.Headvertebrae, DataUtils.readExcel(sheetName, tcID, "Headvertebrae"));
 				driver.close();
 				driver.switchTo().window(parentWindow);
 			}
 		}
 	}
 
+	public static void verifyLookupvalue(WebDriver driver, WebElement ElementID, String excelvalue) throws Exception {
+		String ExpectedData = excelvalue;
+		String portaldata = ElementID.getText();
+		if (portaldata.equals(ExpectedData)) {
+			Report.testStepStatus("Value same", "Pass", "The given value is " + ExpectedData + " and lookup value is "
+					+ portaldata + " both are same verified");
+
+		} else {
+			Report.testStepStatus("Value not same", "Fail", "The given value is " + ExpectedData
+					+ " and lookup value is " + portaldata + " both are different not verified ");
+		}
+
+	}
 }
